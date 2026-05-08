@@ -1,0 +1,453 @@
+ 
+ 
+ 
+ 
+Project Title 
+End-to-End Machine Learning Product for Telecom 
+Customer Churn Prediction 
+Skills take away From 
+This Project 
+Python, Pandas, NumPy, Data Cleaning, Exploratory 
+Data Analysis, 
+Feature Engineering, Statistics, Machine Learning, 
+Class Imbalance Handling, Model Evaluation, 
+Explainable AI (SHAP), REST API Development, 
+Flask/FastAPI, Git & GitHub, Documentation 
+Domain 
+ 
+ 
+Problem Statement: 
+You are working as a Data Scientist for a telecom company. 
+The company is facing high customer churn, which negatively impacts revenue and growth. 
+You are given historical customer data containing: 
+• 
+Demographics 
+• 
+Account details 
+• 
+Services subscribed 
+• 
+Billing information 
+Your task is to build an end-to-end Machine Learning product that: 
+• 
+Predicts whether a customer will churn 
+• 
+Explains why the customer is likely to churn 
+• 
+Helps the business take proactive retention actions 
+• 
+Exposes predictions via a production-ready API 
+ 
+ 
+ 
+ 
+ 
+Business Use Cases 
+• 
+Identify customers at high risk of churn 
+• 
+Reduce customer acquisition cost 
+• 
+Improve customer lifetime value (CLV) 
+• 
+Enable personalized retention offers 
+• 
+Support management decisions with data-driven insights 
+Approach 
+3.1 Data Understanding & Ingestion 
+Load the telecom customer churn dataset and understand the business meaning of each column. 
+Dataset Columns 
+• 
+customerID 
+• 
+gender 
+• 
+SeniorCitizen 
+• 
+Partner 
+• 
+Dependents 
+• 
+tenure 
+• 
+PhoneService 
+• 
+MultipleLines 
+• 
+InternetService 
+• 
+OnlineSecurity 
+• 
+OnlineBackup 
+• 
+DeviceProtection 
+• 
+TechSupport 
+• 
+StreamingTV 
+• 
+StreamingMovies 
+• 
+Contract 
+• 
+PaperlessBilling 
+• 
+PaymentMethod 
+• 
+MonthlyCharges 
+• 
+TotalCharges 
+• 
+Churn (Target) 
+ 
+ 
+ 
+ 
+3.2 Exploratory Data Analysis (EDA) 
+Perform detailed analysis to answer key business questions: 
+• 
+Do senior citizens churn more? 
+• 
+How does tenure affect churn? 
+• 
+Which contract types have the highest churn? 
+• 
+Does monthly billing amount influence churn? 
+• 
+Which services are associated with higher churn? 
+Mandatory Visualizations 
+• 
+Churn distribution (class imbalance) 
+• 
+Tenure vs churn 
+• 
+MonthlyCharges vs churn 
+• 
+Contract vs churn 
+• 
+InternetService vs churn 
+• 
+Correlation heatmap 
+ 
+3.3 Data Cleaning & Preprocessing 
+• 
+Convert TotalCharges to numeric (handle missing values) 
+• 
+Drop non-informative columns (customerID) 
+• 
+Handle missing and inconsistent values 
+• 
+Encode categorical variables 
+• 
+Scale numerical features (tenure, MonthlyCharges, TotalCharges) 
+• 
+Split data into Train / Validation / Test sets 
+ 
+3.4 Feature Engineering 
+Create meaningful features such as: 
+• 
+AvgMonthlySpend = TotalCharges / tenure 
+• 
+Tenure buckets (New / Medium / Loyal) 
+• 
+Service count per customer 
+• 
+Contract duration flags 
+• 
+High-value customer indicator 
+Important: Each engineered feature must have business meaning. 
+ 
+ 
+ 
+3.5 Handling Class Imbalance 
+Since churn is imbalanced: 
+• 
+Use class weights or resampling techniques 
+• 
+Avoid accuracy-only evaluation 
+• 
+Focus on Recall, Precision, F1-score, ROC-AUC 
+ 
+3.6 Model Building & Evaluation 
+Train and compare multiple models: 
+• 
+Logistic Regression (baseline) 
+• 
+Random Forest 
+• 
+Gradient Boosting / XGBoost (Optional) 
+Evaluation Metrics 
+• 
+ROC-AUC 
+• 
+Precision 
+• 
+Recall 
+• 
+F1-score 
+• 
+Confusion Matrix 
+ 
+3.7 Threshold Optimization 
+• 
+Default threshold (0.5) is not mandatory 
+• 
+Choose optimal threshold based on: 
+o Cost of losing a customer 
+o Cost of retention incentives 
+ 
+ 
+ 
+ 
+3.8 Model Explainability 
+Apply Explainable AI techniques: 
+• 
+SHAP global feature importance 
+• 
+SHAP local explanations per customer 
+Explain: 
+• 
+Why customers churn 
+• 
+Which features drive churn the most 
+ 
+3.9 Deployment (ML Product Layer) 
+Build a REST API using Flask or FastAPI. 
+Input Example 
+{ 
+  "gender": "Female", 
+  "SeniorCitizen": 0, 
+  "Partner": "Yes", 
+  "Dependents": "No", 
+  "tenure": 5, 
+  "PhoneService": "Yes", 
+  "InternetService": "Fiber optic", 
+  "Contract": "Month-to-month", 
+  "MonthlyCharges": 89.85 
+} 
+ 
+ 
+Output Example 
+{ 
+  "churn_probability": 0.81, 
+  "churn_risk": "High" 
+} 
+ 
+Technologies and Tools 
+Technology 
+Purpose 
+Python 
+Core programming 
+Pandas, NumPy 
+Data processing 
+Matplotlib, Seaborn Visualization 
+Scikit-learn 
+ML modeling 
+SHAP 
+Explainability 
+Flask / FastAPI 
+API deployment 
+Git & GitHub 
+Version control 
+Docker (Optional) 
+Containerization 
+Results 
+Each student must submit: 
+Structured folders: 
+data/ 
+notebooks/ 
+src/ 
+models/ 
+api/ 
+utils/ 
+ 
+ 
+ 
+Notebooks 
+• 
+EDA Notebook 
+• 
+Modeling Notebook 
+• 
+Explainability Notebook 
+API 
+• 
+/predict endpoint 
+• 
+JSON input/output 
+• 
+Input validation 
+Documentation 
+• 
+README.md explaining: 
+o Business problem 
+o Dataset description 
+o Modeling approach 
+o API usage 
+o Business insights 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Project Evaluation Metrics 
+Evaluation Criteria 
+Marks 
+Data Understanding & EDA 
+15 
+Feature Engineering 
+10 
+Model Building & Evaluation 20 
+Class Imbalance Handling 
+10 
+Threshold Optimization 
+10 
+Explainability (SHAP) 
+15 
+API Deployment 
+10 
+Documentation 
+5 
+Code Quality 
+5 
+Total 
+100 
+Bonus (+5): 
+• 
+Dockerized API 
+• 
+Streamlit dashboard 
+• 
+Business cost analysis 
+ 
+Dataset Explanation 
+1. Customer Demographics 
+• 
+gender 
+• 
+SeniorCitizen 
+• 
+Partner 
+• 
+Dependents 
+2. Account & Services 
+• 
+PhoneService 
+• 
+MultipleLines 
+• 
+InternetService 
+• 
+OnlineSecurity 
+• 
+OnlineBackup 
+• 
+DeviceProtection 
+• 
+TechSupport 
+• 
+StreamingTV 
+• 
+StreamingMovies 
+ 
+ 
+3. Billing & Contract 
+• 
+Contract 
+• 
+PaperlessBilling 
+• 
+PaymentMethod 
+• 
+MonthlyCharges 
+• 
+TotalCharges 
+• 
+tenure 
+4. Target Variable 
+• 
+Churn (Yes / No) 
+ 
+Project Deliverables 
+• 
+Private GitHub Repository 
+• 
+Clean notebooks 
+• 
+Model artifacts 
+• 
+REST API 
+• 
+README.md 
+• 
+Final business summary 
+ 
+Project Guidelines: 
+1. GitHub Repository 
+○ Push your final project to your GitHub account. 
+○ Repository must be private during the assignment period. 
+○ Add the instructor's GitHub ID as a collaborator for review. 
+2. Naming Convention 
+○ GitHub Repo Name: telecom-churn-ml-{yourname} 
+○ Example: telecom-churn-ml-amit 
+ 
+Timeline: 
+Define the project timeline, including milestones and deadlines. 
+ 
+ 
+ 
+ 
+PROJECT DOUBT CLARIFICATION SESSION ( PROJECT AND CLASS DOUBTS) 
+ 
+About Session: The Project Doubt Clarification Session is a helpful resource for resolving questions 
+and concerns about projects and class topics. It provides support in understanding project requirements, 
+addressing code issues, and clarifying class concepts. The session aims to enhance comprehension and 
+provide guidance to overcome challenges effectively. 
+Note: Book the slot at least before 12:00 Pm on the same day 
+ 
+Timing: Monday-Saturday (4:00PM to 5:00PM) 
+ 
+Booking link :https://forms.gle/XC553oSbMJ2Gcfug9 
+ 
+ 
+For DE/BADM project/class topic doubt slot clarification session: 
+ 
+ 
+Booking link : https://forms.gle/NtkQ4UV9cBV7Ac3C8 
+ 
+Session timing:  
+ 
+For DE: 04:00 pm to 5:00 pm every saturday 
+For BADM 05:00 to 07:00 pm every saturday 
+ 
+ 
+ 
+LIVE EVALUATION SESSION (CAPSTONE AND FINAL PROJECT) 
+ 
+About Session: The Live Evaluation Session for Capstone and Final Projects allows participants to 
+showcase their projects and receive real-time feedback for improvement. It assesses project quality and 
+provides an opportunity for discussion and evaluation. 
+Note: This form will Open only on Saturday (after 2 PM ) and Sunday on Every Week 
+ 
+Timing:  
+ 
+For BADM and DE 
+Monday-Saturday (11:30AM to 1:00PM) 
+ 
+For DS and AIML 
+Monday-Saturday (05:30PM to 07:00PM) 
+ 
+ 
+Booking link : https://forms.gle/1m2Gsro41fLtZurRA 
+ 
+ 
+     
